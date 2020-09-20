@@ -1,0 +1,38 @@
+/* Button colors */
+#new {
+	color: rgb(0, 123, 255);
+	margin-left: 0;
+}
+
+#new:hover {
+	background-color: rgba(0, 123, 255, 0.1) !important;
+	box-shadow: 0 0 2px rgba(0, 123, 255, 0.2);
+}
+
+#all {
+	color: rgb(173, 181, 189);
+}
+
+#all:hover {
+	background-color: rgba(173, 181, 189, 0.1) !important;
+	box-shadow: 0 0 2px rgba(173, 181, 189, 0.2);
+}
+
+#active {
+	color: rgb(255, 193, 7);
+}
+
+#active:hover {
+	background-color: rgba(255, 193, 7, 0.1) !important;
+	box-shadow: 0 0 2px rgba(255, 193, 7, 0.2);
+}
+
+#completed {
+	color: rgb(40, 167, 69);
+	margin-right: 0;
+}
+
+#completed:hover {
+	background-color: rgba(40, 167, 69, 0.1) !important;
+	box-shadow: 0 0 2px rgba(40, 167, 69, 0.2);
+}

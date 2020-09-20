@@ -1,0 +1,266 @@
+/* Grab some of the fonts */
+@font-face {
+	font-family: ProductSans-Regular;
+	src: url("./fonts/Product Sans/ProductSans-Regular.ttf");
+}
+
+@font-face {
+	font-family: ProductSans-Thin;
+	src: url("./fonts/Product Sans/ProductSans-Thin.ttf");
+}
+
+@font-face {
+	font-family: ProductSans-ThinItalic;
+	src: url("./fonts/Product Sans/ProductSans-ThinItalic.ttf");
+}
+
+@font-face {
+	font-family: ProductSans-Italic;
+	src: url("./fonts/Product Sans/ProductSans-Italic.ttf");
+}
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	font-size: 13px;
+}
+
+ul {
+	list-style: none;
+}
+
+body {
+	width: 100%;
+	height: 100vh;
+	background: var(--cyan) -webkit-linear-gradient(
+			45deg,
+			var(--cyan),
+			var(--purple)
+		) no-repeat !important;
+	background: var(--cyan) linear-gradient(45deg, var(--cyan) 25%, var(--purple))
+		no-repeat !important;
+	overflow: hidden;
+	font-family: ProductSans-Regular, var(--font-family-sans-serif) !important;
+}
+
+.todoapp {
+	position: relative;
+	width: inherit;
+	height: inherit;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.header {
+	width: inherit;
+	width: inherit;
+	height: 7rem !important;
+	position: relative;
+	top: 0;
+	left: 0;
+}
+
+h1 {
+	color: var(--white);
+	margin: 0;
+	padding: 2rem;
+	/*  position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+*/
+}
+
+.app-window {
+	font-size: 1.1rem;
+	max-width: 450px;
+	background: var(--white);
+	height: 80vh;
+	margin: 0 2rem;
+	padding: 0 15px;
+	overflow-x: hidden;
+	overflow-y: scroll;
+	box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+.deactivated {
+	opacity: 0.5;
+	filter: blur(3px) grayscale(1);
+}
+
+select {
+	-webkit-appearance: none !important;
+}
+
+.filter {
+	padding-top: 15px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	position: sticky;
+	top: 0;
+	left: 0;
+	z-index: 3 !important;
+	background: #ffffff;
+}
+
+.row {
+	margin-right: unset !important;
+	margin-left: unset !important;
+}
+
+.filter .row {
+	margin-bottom: 1rem;
+}
+
+label {
+	width: 100%;
+}
+
+.col-1,
+.col-10,
+.col-11,
+.col-12,
+.col-2,
+.col-3,
+.col-4,
+.col-5,
+.col-6,
+.col-7,
+.col-8,
+.col-9 {
+	padding-left: 10px !important;
+	padding-right: 10px !important;
+	position: relative;
+}
+
+.btn {
+	border: none;
+	background: #ffffff;
+	box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+	margin-left: 10px;
+	margin-right: 10px;
+	border-radius: 250px !important;
+}
+.btn:hover,
+btn:active,
+btn:focus,
+btn:enabled {
+	background-color: rgba(0, 0, 0, 0.03);
+}
+
+.gnrl-btn {
+	min-width: 6rem;
+}
+
+.status {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+
+p.todosNumber {
+	margin: 0 1rem;
+	background: #dc3545;
+	padding: 0 8px;
+	border-radius: 50%;
+	color: #ffffff;
+	font-weight: 800;
+}
+
+h4 {
+	text-transform: uppercase;
+	font-weight: 900 !important;
+	font-family: ProductSans-Thin;
+	padding-top: 0.5rem;
+	font-size: 1rem !important;
+	color: var(--grey);
+}
+
+.todo-complete {
+	color: var(--gray);
+	font-weight: 100;
+}
+
+.todo-complete:hover {
+	background-color: rgba(0, 0, 0, 0.01);
+}
+
+label {
+	margin-bottom: 0 !important;
+}
+
+p {
+	margin-bottom: 0 !important;
+}
+
+#edit {
+	color: rgb(0, 0, 0);
+}
+
+#edit:hover {
+	background-color: rgba(0, 0, 0, 0.1) !important;
+}
+
+#complete {
+	color: rgb(40, 167, 69);
+}
+
+#complete:hover {
+	background-color: rgba(40, 167, 69, 0.1) !important;
+}
+
+#delete {
+	color: rgb(220, 53, 69);
+}
+
+#delete:hover {
+	background-color: rgba(220, 53, 69, 0.2) !important;
+}
+
+/* Editor window popup */
+.editor-window {
+	width: 30rem;
+	height: 20rem;
+	background: var(--white);
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.3);
+	z-index: 3;
+	visibility: hidden;
+}
+
+#close {
+	box-shadow: unset;
+	border-radius: unset;
+	color: rgb(220, 53, 69);
+	background: rgba(220, 53, 69, 0.2) !important;
+}
+#close:hover {
+	background-color: rgba(220, 53, 69, 0.5) !important;
+}
+
+#save:hover {
+	opacity: 1;
+	box-shadow: 0 0 2px rgba(0, 123, 255, 0.2);
+}
+
+.bold {
+	font-weight: bolder;
+}
+
+.italic {
+	font-style: italic;
+}
+
+.underline {
+	text-decoration: underline;
+}
